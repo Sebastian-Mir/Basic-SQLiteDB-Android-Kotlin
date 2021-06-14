@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Simple layout to test the insertion of data in a SQLite database
+Inserts the values of an object Exercise using the insert button
+then retrieves the values using the Get Exercise button.
+The data for now is converted into a string and shown in a textView
+(see Exercise.kt Class for more info about why)
+-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_new_exercise"
+        android:text="@string/add_new_exercise"
+        android:textSize="20sp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/exercise_name"
+        android:hint="@string/exercise_name"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/add_new_exercise"
+        app:layout_constraintStart_toStartOf="@+id/add_new_exercise"
+        app:layout_constraintEnd_toEndOf="@+id/add_new_exercise"
+         />
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rep_or_time"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="@+id/add_new_exercise"
+        app:layout_constraintTop_toBottomOf="@+id/exercise_name"
+        >
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/repetitions"
+            android:checked="true"
+            android:text="@string/repetitions"
+            />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/time"
+            android:text="@string/time"
+            />
+    </RadioGroup>
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/insert_exercise"
+        android:text="@string/insert_exercise"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/rep_or_time"
+        app:layout_constraintStart_toStartOf="@+id/add_new_exercise"
+        app:layout_constraintEnd_toEndOf="@+id/add_new_exercise"
+        android:gravity="center_horizontal"
+        />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/status"
+        app:layout_constraintTop_toBottomOf="@+id/insert_exercise"
+        app:layout_constraintStart_toStartOf="@+id/insert_exercise"
+        app:layout_constraintEnd_toEndOf="@+id/insert_exercise"
+        android:gravity="center_horizontal"
+        android:text="@string/status"
+        />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/read_exercise"
+        android:text="@string/get_exercises"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/status"
+        app:layout_constraintStart_toStartOf="@+id/add_new_exercise"
+        app:layout_constraintEnd_toEndOf="@+id/add_new_exercise"
+        android:gravity="center_horizontal"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

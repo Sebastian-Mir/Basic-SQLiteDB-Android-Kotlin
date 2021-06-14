@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SqLite Test</string>
+    <string name="exercise_name">Exercise Name</string>
+    <string name="repetitions">Repetitions</string>
+    <string name="time">Time</string>
+    <string name="add_new_exercise">Add a new exercise</string>
+    <string name="insert_exercise">Insert Exercise</string>
+    <string name="status">Status</string>
+    <string name="get_exercises">Get exercises</string>
+</resources>
